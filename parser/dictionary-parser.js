@@ -19,8 +19,8 @@ fs.readFile('../src/cc-cedict.txt', 'UTF-8', function(err, data){
 
 		var line = lines[i];
 
-		// not a comment
-		if (line[0] !== '#' && line !== undefined){
+		// Make sure the line is not a comment 
+		if (line !== undefined && line[0] !== '#'){
 			var spaceSplit = line.split(' ');
 			var traditional = spaceSplit[0];
 			var simplified = spaceSplit[1];
